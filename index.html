@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title> Project 78: My Family Book </title>
+</head>
+
+<body style="background-color: lemonchiffon; text-align: center;">
+    <h1 style="font-size: 40px;"> My Family Book: The Choi Family </h1>
+    <img style="height: 1100px;" src="daddy.jpg" class="img-responsive" id="image">
+    <p id="name" style="font-size: 25px;"> Dong Choi </p>
+    <div>
+        <button type="button" style="margin-top: 8px;" onclick="next()"> Next Family Member </button>
+    </div>
+    <script>
+        var images = ["mommy.jpg", "esther.jpg", "atom.jpg", "crystal.jpg", "daddy.jpg"];
+        var names = ["Jeounghee Choi", "Esther Choi", "Atom", "Crystal", "Dong Choi"];
+        var i = 0;
+        function next() {
+            document.getElementById("image").src = images[i];
+            document.getElementById("name").innerHTML = names[i];
+            i++;
+            if (i > 4) {
+                i = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
